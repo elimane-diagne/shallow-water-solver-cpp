@@ -21,13 +21,14 @@ This type of model is widely used in **hydraulics, oceanography, and environment
 
 The Shallow Water Equations describe the evolution of a thin layer of fluid under gravity.
 
-[
-\partial_t h + \partial_x (hu) = 0
-]
+Continuity equation:
 
-[
-\partial_t (hu) + \partial_x \left(hu^2 + \frac{gh^2}{2}\right) = -gh \partial_x z
-]
+∂ₜ h + ∂ₓ (hu) = 0
+
+Momentum equation:
+
+∂ₜ (hu) + ∂ₓ (hu² + g h² / 2) = − g h ∂ₓ z
+
 
 where:
 
@@ -51,15 +52,13 @@ The conservative variables are updated using **numerical fluxes at cell interfac
 
 To improve accuracy and maintain stability, the solver includes:
 
-* **Hydrostatic reconstruction**
-* **Slope limiter**
+Hydrostatic reconstruction**
+Slope limiter
 
 These techniques ensure:
 
-* preservation of steady states
-* avoidance of non-physical oscillations
-
----
+preservation of steady states
+avoidance of non-physical oscillations
 
 ## Project Structure
 
